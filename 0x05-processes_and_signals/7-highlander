@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# file: 7-highlander
+# Auth: kelechi nnadi <alx swe>
+
+while true;
+do
+	echo "To infinity and beyond"
+	sleep 2
+	if [ SIGTERM ]
+	then 
+		echo "I am invincible!!!"
+	fi
+done
