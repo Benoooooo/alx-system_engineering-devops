@@ -2,8 +2,8 @@
 # file: 4-to_infinity_and_beyond
 # Auth: kelechi nnadi <alx swe>
 
-while [ true ];
+while true;
 do
 	echo "To infinity and beyond"
-	sleep 2
+	sleep 2;
 done
