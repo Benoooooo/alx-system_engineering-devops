@@ -2,8 +2,6 @@
 # file: 7-highlander
 # Auth: kelechi nnadi <alx swe>
 
-trap 'terminate' SIGTERM
-
 while true;
 do
 	echo "To infinity and beyond"
