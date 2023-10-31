@@ -2,9 +2,4 @@
 # file: 8-beheaded_process
 # Auth: kelechi nnadi <alx swe>
 
-PID=$(pgrep -f "4-to_infinity_and_beyond")
-
-if [ -n "$PID" ];
-then
-	        kill -TERM "$PID"
-fi
+pkill -SIGTERM 7-highlander
