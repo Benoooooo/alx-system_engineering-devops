@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # file: 7-highlander
 # Auth: kelechi nnadi <alx swe>
+terminate(){
+	echo "I am invincible!!!"
+	exit 0
+}
+
+trap 'terminate' SIGTERM
 
 while true;
 do
 	echo "To infinity and beyond"
 	sleep 2
-	if [ SIGTERM ]
-	then 
-		echo "I am invincible!!!"
-	fi
 done
