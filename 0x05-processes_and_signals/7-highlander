@@ -2,14 +2,11 @@
 # file: 7-highlander
 # Auth: kelechi nnadi <alx swe>
 
-PID=$(pgrep -f "6-stop_me_if_you_can")
-PID=$(mv "6-stop_me_if_you_can" "67-stop_me_if_you_can")
-
 while true;
 do
 	echo "To infinity and beyond"
 	sleep 2
-	if [ $PID ]
+	if [ SIGTERM ]
 	then 
 		echo "I am invincible!!!"
 	fi
