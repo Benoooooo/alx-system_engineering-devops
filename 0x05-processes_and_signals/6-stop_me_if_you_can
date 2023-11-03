@@ -6,5 +6,7 @@ PID=$(pgrep -f  "4-to_infinity_and_beyond")
 
 if [ -f "$PID" ];
 then
-	kill -SIGTERM "$PID"
+	exit
 fi
+
+exit
