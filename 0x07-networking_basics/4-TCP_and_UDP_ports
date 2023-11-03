@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# file: 4-TCP_and_UDP_ports
+# Auth: kelechi nnadi <alx swe>
+# bash script that diplays listening ports, that only show
+
+o "Active Internet connections (only servers)"
+echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
+
+# Display listening TCP ports
+netstat -tuln | grep LISTEN | awk '{print "tcp\t0\t0\t"$4"\t"$0;}' | cut -d' ' -f 4- | \
+while read line; do
+    port=$(echo $line | cut -d' ' -f 1)
+    pid=$(lsof -i :$port -t)
+    if [ -n "$pid" ]; then
+        program=$(ps -p $pid -o comm=)
+        echo "tcp $line\t$pid/$program"
+    fi
+done
+# Display listening UDP ports
+netstat -uln | grep -v "Active" | grep "udp" | awk '{print "udp\t0\t0\t"$4"\t"$0;}' | cut -d' ' -f 4- | \
+while read line; do
+    port=$(echo $line | cut -d' ' -f 1)
+    pid=$(lsof -i :$port -t)
+    if [ -n "$pid" ]; then
+        program=$(ps -p $pid -o comm=)
+        echo "udp $line\t$pid/$program"
+    fi
+done
+echo "Active UNIX domain sockets (only servers)"
+echo "Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path"
+
+# Display listening Unix domain sockets
+netstat -lx | grep LISTEN | awk '{print "unix\t2\t[ ACC ]\t"$1"\tLISTENING\t"$6;}' | cut -d' ' -f 2- | \
+while read line; do
+    socket_path=$(echo $line | cut -d' ' -f 5)
+    pid=$(lsof $socket_path | awk 'NR==2 {print $2}')
+    if [ -n "$pid" ]; then
+        program=$(ps -p $pid -o comm=)
+        echo "unix $line\t$pid/$program\t$socket_path"
+    fi
+done
