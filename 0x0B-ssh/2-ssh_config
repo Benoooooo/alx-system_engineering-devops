@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# to configure my ssh configuration file, to connect to the sever and
-# reject password
-
-~/.ssh/config 
