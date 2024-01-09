@@ -1,20 +1,6 @@
-#!/usr/bin/bash
-# the code for that
+#!/usr/bin/env bash
+# fixing docker container to return a page that contains Hello Holberton
 
-docker exec -it <container_id> /bin/bash
-
-cd /etc/apache2/sites-available
-
-nano 000-default.conf
-
-<VirtualHost *:80>
-    DocumentRoot /var/www/html
-    # ... other configurations ...
-</VirtualHost>
-
+# connected to docker container to invastigate and fix 
+#docker exec -it CONTAINER_ID  bin/bash
 service apache2 restart
-
-exit
-
-curl 0:8080
-
