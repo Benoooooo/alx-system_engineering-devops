@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Install necessary tools
+sudo apt update
+sudo apt install -y net-tools nginx
+
+# Check Nginx configuration
+sudo sed -i 's/listen 80;/listen 80 default_server;/g' /etc/nginx/nginx.conf
+
+# Check if Nginx is listening on port 80
+sudo netstat -tuln | grep 80
+
+# Check for conflicting services
+sudo lsof -i :80
+
+# Restart Nginx
+sudo systemctl restart nginx
+
+# Verify Nginx is listening on port 80
+sudo netstat -tuln | grep 80
