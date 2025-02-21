@@ -1,4 +1,4 @@
-## shell, besics
+# shell, besics
 * cd
 * ls
 * pwd
