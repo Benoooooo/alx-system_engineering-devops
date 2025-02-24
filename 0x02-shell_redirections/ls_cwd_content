@@ -1,5 +1,5 @@
-total 4
-drwxr-xr-x 1 benjamin benjamin 4096 Feb 24 20:40 .
+total 8
+drwxr-xr-x 1 benjamin benjamin 4096 Feb 24 20:55 .
 drwxr-xr-x 1 benjamin benjamin 4096 Feb 23 13:17 ..
 -rwxr--r-- 1 benjamin benjamin   30 Feb 23 14:28 0-hello_world
 -rwxr--r-- 1 benjamin benjamin   28 Feb 24 08:11 1-confused_smiley
@@ -9,7 +9,8 @@ drwxr-xr-x 1 benjamin benjamin 4096 Feb 23 13:17 ..
 -rwxr--r-- 1 benjamin benjamin   29 Feb 24 08:34 5-firstlines
 -rwxr--r-- 1 benjamin benjamin   40 Feb 24 13:16 6-third_line
 -rwxr--r-- 1 benjamin benjamin   77 Feb 24 17:58 7-file
--rwxr--r-- 1 benjamin benjamin   46 Feb 24 20:40 8-cwd_state
+-rwxr--r-- 1 benjamin benjamin   36 Feb 24 20:55 8-cwd_state
 -rw-r--r-- 1 benjamin benjamin  398 Feb 23 13:26 README.md
 -rw-r--r-- 1 benjamin benjamin   38 Feb 24 18:00 \*\\'Best
 -rw-r--r-- 1 benjamin benjamin  801 Feb 24 08:53 iacta
+-rw-r--r-- 1 benjamin benjamin    0 Feb 24 20:55 ls_cwd_content
