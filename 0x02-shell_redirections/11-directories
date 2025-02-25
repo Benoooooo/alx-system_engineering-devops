@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -mindepth 2 -type d \( ! -path . -a ! -path ./.. \) | wc -l
+find . -mindepth 1 -type d \( ! -path . -a ! -path ./.. \) | wc -l
